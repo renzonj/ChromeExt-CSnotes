@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Sidebar Notes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="tab-header">
+      <div class="tab-list" id="tabList"></div>
+      <button id="newTabBtn" class="add-tab-btn">+</button>
+    </div>
+    <div class="tab-content" id="tabContent">
+      <div id="searchContainer" class="search-container">
+        <div class="search-input-wrapper">
+          <input type="text" id="searchInput" placeholder="Search notes..." class="search-input" spellcheck="true">
+          <button id="clearSearchBtn" class="clear-search-btn">×</button>
+        </div>
+        <button id="searchBtn" class="search-btn">Search</button>
+        <button id="addNoteBtn" class="add-note-btn"></button>
+      </div>
+    </div>
+
+    <!-- New Tab Modal -->
+    <div id="newTabModal" class="modal">
+      <div class="modal-content">
+        <h3>New Tab</h3>
+        <div class="input-group">
+          <input type="color" id="tabColor" value="#0071e3">
+          <input type="text" id="tabName" placeholder="Tab Name" spellcheck="true">
+        </div>
+        <div class="modal-buttons">
+          <button id="cancelTab">Cancel</button>
+          <button id="confirmTab" disabled>Create</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rename Tab Modal -->
+    <div id="renameTabModal" class="modal">
+      <div class="modal-content">
+        <h3>Rename Tab</h3>
+        <div class="input-group">
+          <input type="color" id="newTabColor" value="#0071e3">
+          <input type="text" id="newTabName" placeholder="New Tab Name" spellcheck="true">
+        </div>
+        <div class="modal-buttons">
+          <button id="cancelRenameTab">Cancel</button>
+          <button id="confirmRenameTab">Rename</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- New/Edit Note Modal -->
+    <div id="newNoteModal" class="modal">
+      <div class="modal-content">
+        <h3 id="noteModalTitle">New Note</h3>
+        <input type="text" id="noteTitle" placeholder="Title" spellcheck="true">
+        <textarea id="noteContent" placeholder="Content" spellcheck="true"></textarea>
+        <div class="modal-buttons">
+          <button id="cancelNote">Cancel</button>
+          <button id="confirmNote" disabled>Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="sidebar.js"></script>
+</body>
+</html>
